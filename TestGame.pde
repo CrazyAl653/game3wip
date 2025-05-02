@@ -11,9 +11,10 @@ class TestGame extends MiniGame {
   public void play() {
     super.play();
     background(255, 0, 0);
+    textSize(40);
     textAlign(CENTER);
     text("Press CTRL", width / 2, height / 5);
-    if (keyCode == 17) {
+    if (config.keys[0]) {
       this.objectiveComplete = true;
     }
     if (this.objectiveComplete) {
